@@ -5,7 +5,7 @@ Spring Boot rakendus värvide haldamiseks ja segamiseks, HSQLDB andmebaasiga.
 ## Funktsionaalsus
 
 ### Backend API
-- **CRUD operatsioonid värvidele** - Loo, luge, uuenda, kustuta värve
+- **CRUD operatsioonid värvidele** - Loomine, lugemine, uuenda, kustuta värve
 - **Värvide segamine** - Segatud värvide salvestamine andmebaasi
 - **REST API** - Swagger UI dokumentatsiooniga
 - **HSQLDB** - Mälupõhine andmebaas
