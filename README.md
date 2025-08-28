@@ -1,6 +1,6 @@
 # Värvide CRUD Rakendus
 
-Spring Boot rakendus värvide haldamiseks ja segamiseks HSQLDB andmebaasiga.
+Spring Boot rakendus värvide haldamiseks ja segamiseks, HSQLDB andmebaasiga.
 
 ## Funktsionaalsus
 
