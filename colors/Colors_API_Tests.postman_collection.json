@@ -1,0 +1,682 @@
+{
+	"info": {
+		"_postman_id": "colors-api-tests-fixed",
+		"name": "Colors API Tests",
+		"description": "Spring Boot värvide CRUD rakenduse API testid - parandatud ID-dega",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Color Controller",
+			"item": [
+				{
+					"name": "Get All Colors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors"
+							]
+						},
+						"description": "Hangi kõik värvid andmebaasist"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Color by ID - Punane",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"0"
+							]
+						},
+						"description": "Hangi värv ID järgi (0 = Punane)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Color by ID - Roheline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"1"
+							]
+						},
+						"description": "Hangi värv ID järgi (1 = Roheline)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Color by ID - Sinine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"2"
+							]
+						},
+						"description": "Hangi värv ID järgi (2 = Sinine)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Color by ID - Kollane",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"3"
+							]
+						},
+						"description": "Hangi värv ID järgi (3 = Kollane)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Color - Oranž",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Oranž\",\n    \"r\": 255,\n    \"g\": 165,\n    \"b\": 0\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors"
+							]
+						},
+						"description": "Loo uus oranž värv"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Color - Lilla",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lilla\",\n    \"r\": 128,\n    \"g\": 0,\n    \"b\": 128\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors"
+							]
+						},
+						"description": "Loo uus lilla värv"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Color",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tumedam Punane\",\n    \"r\": 200,\n    \"g\": 0,\n    \"b\": 0\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"0"
+							]
+						},
+						"description": "Uuenda punast värvi tumedamaks"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Color",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"5"
+							]
+						},
+						"description": "Kustuta värv ID-ga 5 (kui eksisteerib)"
+					},
+					"response": []
+				},
+				{
+					"name": "Debug - Get All Colors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/debug/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"debug",
+								"all"
+							]
+						},
+						"description": "Debug endpoint - näitab kõiki värve detailselt"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Invalid Color ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/colors/999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors",
+								"999"
+							]
+						},
+						"description": "Testi vigase ID-ga (peaks tagastama 404)"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Invalid Color Creation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\",\n    \"r\": 300,\n    \"g\": -10,\n    \"b\": 500\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"colors"
+							]
+						},
+						"description": "Testi vigase andmetega värvi loomist"
+					},
+					"response": []
+				}
+			],
+			"description": "Värvide CRUD operatsioonid"
+		},
+		{
+			"name": "Mixed Color Controller",
+			"item": [
+				{
+					"name": "Get All Mixed Colors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Hangi kõik segatud värvid"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Punane + Roheline",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 0,\n    \"color2Id\": 1,\n    \"name\": \"Punane + Roheline\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv: Punane + Roheline"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Punane + Sinine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 1,\n    \"color2Id\": 3,\n    \"name\": \"Punane + Sinine\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv: Punane + Sinine"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Punane + Kollane",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 1,\n    \"color2Id\": 4,\n    \"name\": \"Punane + Kollane\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv: Punane + Kollane"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Roheline + Sinine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 2,\n    \"color2Id\": 3,\n    \"name\": \"Roheline + Sinine\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv: Roheline + Sinine"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Roheline + Kollane",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 2,\n    \"color2Id\": 4,\n    \"name\": \"Roheline + Kollane\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv: Roheline + Kollane"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Sinine + Kollane",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 3,\n    \"color2Id\": 4,\n    \"name\": \"Sinine + Kollane\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv: Sinine + Kollane"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mixed Color - Auto Name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 1,\n    \"color2Id\": 2\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Loo segatud värv automaatse nimega"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Mixed Color by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors",
+								"1"
+							]
+						},
+						"description": "Hangi segatud värv ID järgi"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Mixed Colors by Color ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors/by-color/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors",
+								"by-color",
+								"1"
+							]
+						},
+						"description": "Hangi kõik segatud värvid, mis sisaldavad punast värvi (ID 1)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Mixed Color",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors",
+								"1"
+							]
+						},
+						"description": "Kustuta segatud värv ID-ga 1"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Duplicate Mixed Color",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 1,\n    \"color2Id\": 2,\n    \"name\": \"Punane + Roheline (duplikaat)\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Testi sama kombinatsiooni uuesti (peaks tagastama vea)"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Same Color Mixing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 1,\n    \"color2Id\": 1,\n    \"name\": \"Punane + Punane\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Testi sama värvi segamist (peaks tagastama vea)"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Invalid Color IDs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color1Id\": 999,\n    \"color2Id\": 888,\n    \"name\": \"Olematud värvid\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/mixed-colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"mixed-colors"
+							]
+						},
+						"description": "Testi olematute värvide ID-dega"
+					},
+					"response": []
+				}
+			],
+			"description": "Segatud värvide operatsioonid"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

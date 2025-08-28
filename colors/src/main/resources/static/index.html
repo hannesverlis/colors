@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Värvide Segamine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Värvide Segamine</h1>
+        
+        <div class="color-selection">
+            <h2>Vali kaks värvi segamiseks:</h2>
+            <div class="color-buttons">
+                <button class="color-btn" data-color-id="0" data-color-name="Punane" style="background-color: #FF0000;">
+                    Punane
+                </button>
+                <button class="color-btn" data-color-id="1" data-color-name="Roheline" style="background-color: #00FF00;">
+                    Roheline
+                </button>
+                <button class="color-btn" data-color-id="2" data-color-name="Sinine" style="background-color: #0000FF;">
+                    Sinine
+                </button>
+                <button class="color-btn" data-color-id="3" data-color-name="Kollane" style="background-color: #FFFF00;">
+                    Kollane
+                </button>
+            </div>
+        </div>
+
+        <div class="selected-colors">
+            <h3>Valitud värvid:</h3>
+            <div class="selected-colors-display">
+                <div class="selected-color" id="color1-display">
+                    <span>Vali esimene värv</span>
+                </div>
+                <div class="mix-symbol">+</div>
+                <div class="selected-color" id="color2-display">
+                    <span>Vali teine värv</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mix-button-container">
+            <button id="mix-colors-btn" class="mix-button" disabled>
+                Segatud värvid
+            </button>
+        </div>
+
+        <div class="mixed-color-result">
+            <h3>Segatud värv:</h3>
+            <div class="result-box" id="mixed-color-display">
+                <span>Vali kaks värvi ja vajuta "Segatud värvid" nuppu</span>
+            </div>
+            <div class="color-info" id="color-info">
+                <p id="color-name"></p>
+                <p id="color-hex"></p>
+                <p id="color-rgb"></p>
+            </div>
+        </div>
+
+        <div class="history">
+            <h3>Segatud värvide ajalugu:</h3>
+            <div class="history-list" id="history-list">
+                <!-- Siia lisatakse segatud värvid -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
