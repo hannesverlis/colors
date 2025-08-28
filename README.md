@@ -57,6 +57,9 @@ IntelliJ IDEA-s
 
 ## Andmebaasi skeem
 
+<img width="1105" height="851" alt="img" src="https://github.com/user-attachments/assets/87e95d0b-cc2b-41f2-8fd2-eb8a71407ea2" />
+
+
 ### Color tabel
 - `id` - Primaarvõti
 - `name` - Värvi nimi
@@ -77,9 +80,10 @@ IntelliJ IDEA-s
 3. **Ajalugu**: Kõik segatud värvid kuvatakse allpool
 4. **Värvi eemaldamine**: Kliki valitud värvinuppu uuesti
 
-## Arendus
-<img width="1105" height="851" alt="img" src="https://github.com/user-attachments/assets/73926a3e-8fc0-4674-b2ee-d86638914afe" />
+<img width="919" height="1139" alt="img_1" src="https://github.com/user-attachments/assets/4c49dcf1-be52-43eb-ac6c-af451c8d2cfc" />
 
+
+## Arendus
 
 ### Projekt struktuur
 ```
